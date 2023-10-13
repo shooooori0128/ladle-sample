@@ -1,24 +1,31 @@
 {
-  "name": "radle-sample",
+  "name": "ladle-sample",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "ladle:serve": "yarn ladle serve",
+    "ladle:build": "yarn ladle build && yarn ladle preview -p 61000",
+    "snapshot-test": "yarn exec playwright test"
   },
   "dependencies": {
+    "@ladle/react": "^3.2.1",
+    "next": "13.5.4",
     "react": "^18",
-    "react-dom": "^18",
-    "next": "13.5.4"
+    "react-dom": "^18"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@playwright/test": "^1.39.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/sync-fetch": "^0.4.1",
     "eslint": "^8",
-    "eslint-config-next": "13.5.4"
+    "eslint-config-next": "13.5.4",
+    "sync-fetch": "^0.5.2",
+    "typescript": "^5"
   }
 }

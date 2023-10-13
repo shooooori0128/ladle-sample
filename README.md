@@ -1,40 +1,63 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Ladle sample (Component catalog for React like Storybook)
 
-## Getting Started
+## 起動
 
-First, run the development server:
+```sh
+# ローカル起動
+yarn ladle:serve
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# ビルド
+yarn ladle:build
+
+# テスト実行
+yarn snapshot-test
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## メリデリ
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+- ビルドが早い（これに尽きる）
+- ゼロコンフィグで動く
+- CSF準拠なのでStorybookからの移行が楽
+- playwrightとかはstorybook側でラップしているものではないので、変な問題とかに当たったりはしにくそう
+- たまにHMRが動かない
+- ViteでビルドしているのでNext.jsで動かしているプロダクトへの採用はちょっと考えちゃう
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## 今後の予定
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+https://ladle.dev/docs/addons#storybook-interoperability
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## MDX
 
-## Learn More
+https://ladle.dev/docs/mdx
 
-To learn more about Next.js, take a look at the following resources:
+## スナップショットテスト
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+公式にはスナップショットテストの例しか載ってないけど、普通にインタラクションテストも出来そう
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+https://ladle.dev/docs/visual-snapshots
 
-## Deploy on Vercel
+## アドオン
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+https://ladle.dev/docs/addons
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## アクセシリビリティ
+
+https://ladle.dev/docs/a11y
+
+## アクション
+
+https://ladle.dev/docs/actions
+
+## コントロール
+
+https://ladle.dev/docs/controls
+
+## ソース
+
+https://ladle.dev/docs/source
+
+## 参考
+
+古い記事だけど、Storybookとの比較等をザッと知るには良さそう。
+
+https://zenn.dev/occar421/scraps/c6de1cb1c0fc5f
